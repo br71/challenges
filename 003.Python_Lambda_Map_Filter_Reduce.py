@@ -95,3 +95,29 @@ print (z)
 z2 = reduce((lambda x, y: x * y), list5)
 print (z2)
 #stdout: 24
+
+########################################################################################
+
+# Lambda 3 Example
+result_value = 1
+users = (('Matthew',), ('Mike',), ('Mike',), ('Mike',))
+    
+# def r(n):
+#   return str(n)[2:-3]
+
+# if result_value > 0:
+#     users = cur.fetchall()
+#     s= list(map(r,users))      
+
+# Map with lambda (as above)
+if result_value > 0:
+    # (( and  ,) will be removed
+    s = list(map(lambda x: (str(x)[2:-3]),users))
+
+print(s)
+print(s[0])
+for key,val in enumerate(s): print("Name_{}: {}, ".format(key+1,val),end="")
+
+# stdout: ['Matthew', 'Mike', 'Mike', 'Mike']
+# stdout: Matthew
+# Name_1: Matthew, Name_2: Mike, Name_3: Mike, Name_4: Mike,
