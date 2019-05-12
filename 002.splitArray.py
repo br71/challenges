@@ -14,7 +14,7 @@ def findSplitPoint(arr, n) :
 
 	# "Backward looping"  and substracting element (loop cursor location at array index) from left sum 
 	# and check is it equal (adding that element to right sum at sime time).
-	# Take care about "n-1" , -1 last element (backward loopin python). At this way we avoid nested loop (time costly)
+	# Take care about "n-1" , -1 last element (backward looping python). At this way we avoid nested loop (time costly)
 	for i in range(n-1, -1, -1) : 
 		rightSum += arr[i] 
 
