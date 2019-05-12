@@ -7,11 +7,12 @@ class Solution:
 
         if x > 2147483647 or x < -2147483648:
             print("Number must be signed interger")
+            sys.exit(1)
             
 
         if x < 0:
-            # Removing, slicing - sign before reversing number (str(x)[1:])
-            t = int(str(str(x)[1:])[::-1])
+            # Removing, slicing - sign before reversing number [1:] , reversing -> [::-1]
+            t = int("-" + str(x)[1:][::-1])
         else:
             #Reverse slicing !!!
             t = int(str(x)[::-1])
@@ -22,6 +23,8 @@ class Solution:
         else:
             return t
 
-y= -12345678
+z1= -1234567890
+z2= 1234567890
 r = Solution()
-print(r.reverse(y))
+print(r.reverse(z1))
+print(r.reverse(z2))
