@@ -28,3 +28,5 @@ z2= 1234567890
 r = Solution()
 print(r.reverse(z1))
 print(r.reverse(z2))
+# stdout: -987654321
+# stdout: 987654321
