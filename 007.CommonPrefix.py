@@ -99,7 +99,7 @@ print("Second solution: " + longestCommonPrefixPython(l1))
 
 # Results of profiler, second solutions is faster.
 
-# python.exe 007.CommonPrefix.py"
+# python 007.CommonPrefix.py"
 #          17 function calls in 0.016 seconds
 
 #    Ordered by: standard name
