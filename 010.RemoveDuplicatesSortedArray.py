@@ -1,19 +1,28 @@
+import profile
+
 class Solution:
     def removeDuplicates(self, nums) -> int:
-        n = len(nums)
-        i = 1
-        
 
-        for a in range(0,n-1):
-            if nums[a] != nums[a+1]:
-                i = i + 1
-        
-        return i
+        i = 0
+        j = len(nums)
+
+        while True:
+            
+            if nums[i] == nums[i+1]:
+               del nums[i+1]
+               j = j - 1
+            else:
+                i += 1
+
+            if i + 1 == j:
+                break
+
+        return i+1
 
 
-
-num = [0,0,1,1,1,2,2,3,3,4,4,4,4,4,7,7,7,10,10,10]
+nums = [0,0,1,1,1,2,2,3,3,4]
 s = Solution()
 
-print(s.removeDuplicates(num))
+print(s.removeDuplicates(nums))
 
+#print(profile.run("s.removeDuplicates(nums)"))
