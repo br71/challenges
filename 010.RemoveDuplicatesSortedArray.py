@@ -1,7 +1,7 @@
 import profile
 
 class Solution:
-    def removeDuplicates(self, nums) -> int:
+    def removeDuplicates(self, nums: List[int]) -> int:
 
         i = 0
         j = len(nums)
